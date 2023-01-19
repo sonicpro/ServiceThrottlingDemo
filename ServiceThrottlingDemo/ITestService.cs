@@ -21,7 +21,7 @@ namespace ServiceThrottlingDemo
         /// </summary>
         /// <returns>the TotalMilliseconds (int) spent in the service method</returns>
         [OperationContract]
-        int TestMethod();
+        void TestMethod();
 
     } // end of class
 } // end of namespace

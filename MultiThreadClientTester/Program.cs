@@ -79,7 +79,7 @@ namespace MultiThreadClientTester
             Console.WriteLine("Thread {0} starting...", id);
 
             // Thread waits for the the service call to finish.
-            int svcTime = await proxy.TestMethodAsync();
+            await proxy.TestMethodAsync();
 
             DateTime end = DateTime.Now;
 

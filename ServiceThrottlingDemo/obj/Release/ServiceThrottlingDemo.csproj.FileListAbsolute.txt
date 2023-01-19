@@ -1,7 +1,0 @@
-C:\Users\kathl\Dropbox\Projects\ServiceThrottlingDemo\ServiceThrottlingDemo\bin\ServiceThrottlingDemo.dll.config
-C:\Users\kathl\Dropbox\Projects\ServiceThrottlingDemo\ServiceThrottlingDemo\bin\ServiceThrottlingDemo.dll
-C:\Users\kathl\Dropbox\Projects\ServiceThrottlingDemo\ServiceThrottlingDemo\bin\ServiceThrottlingDemo.pdb
-C:\Users\kathl\Dropbox\Projects\ServiceThrottlingDemo\ServiceThrottlingDemo\obj\Release\ServiceThrottlingDemo.csprojAssemblyReference.cache
-C:\Users\kathl\Dropbox\Projects\ServiceThrottlingDemo\ServiceThrottlingDemo\obj\Release\ServiceThrottlingDemo.csproj.CoreCompileInputs.cache
-C:\Users\kathl\Dropbox\Projects\ServiceThrottlingDemo\ServiceThrottlingDemo\obj\Release\ServiceThrottlingDemo.dll
-C:\Users\kathl\Dropbox\Projects\ServiceThrottlingDemo\ServiceThrottlingDemo\obj\Release\ServiceThrottlingDemo.pdb

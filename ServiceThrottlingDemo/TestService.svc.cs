@@ -31,12 +31,9 @@ namespace ServiceThrottlingDemo
         /// Simulates a long running process on a service
         /// </summary>
         /// <returns>the TotalMilliseconds (int) spent in the service method</returns>
-        public int TestMethod()
+        public void TestMethod()
         {
-            DateTime start = DateTime.Now;
             Thread.Sleep(5000);
-            DateTime end = DateTime.Now;
-            return (int)end.Subtract(start).TotalMilliseconds;
         }
     } // end of class
 } // end of namespace
