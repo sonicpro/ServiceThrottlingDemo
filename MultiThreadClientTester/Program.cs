@@ -30,7 +30,7 @@ namespace MultiThreadClientTester
         /// Main method for the program
         /// </summary>
         /// <param name="args">none used</param>
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             Console.WriteLine("Multithread Test to Service...");
             Console.WriteLine(new string('=', 50));
@@ -41,12 +41,16 @@ namespace MultiThreadClientTester
             proxy = new TestServiceClient("BasicHttpBinding_ITestService");
 
             // Create and Run 5 threads in Parallel
-            ParallelLoopResult result = Parallel.For(0, numThreads, x =>
-            {
-                // Zero Based, Need to Make it start at 1
-                ServiceThread(x+1);
-            }
-            );
+            //ParallelLoopResult result = Parallel.For(0, numThreads, x =>
+            //{
+            //    // Zero Based, Need to Make it start at 1
+            //    ServiceThread(x + 1);
+            //}
+            //);
+            Task[] tasks = System.Linq.Enumerable.Range(1, numThreads)
+                .Select(threadNumber => ServiceThread(threadNumber)).ToArray();
+
+            await Task.WhenAll(tasks);
 
             // Make the main UI Wait until the threads are complete
             while (!IsComplete)
@@ -72,7 +76,7 @@ namespace MultiThreadClientTester
         /// Aysynchronous method, each thread calls this method
         /// </summary>
         /// <param name="state">not used</param>
-        private static async void ServiceThread(object state)
+        private static async Task ServiceThread(object state)
         {
             DateTime start = DateTime.Now;
             Console.ForegroundColor = ConsoleColor.Red;
