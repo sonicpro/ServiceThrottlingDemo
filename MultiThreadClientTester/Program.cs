@@ -37,7 +37,7 @@ namespace MultiThreadClientTester
             Console.WriteLine("Press <ENTER> to begin test...");
             Console.ReadLine();
 
-            proxy = new TestServiceClient();
+            proxy = new TestServiceClient("BasicHttpBinding_ITestService");
 
             // Create and Run 5 threads in Parallel
             ParallelLoopResult result = Parallel.For(0, numThreads, x =>

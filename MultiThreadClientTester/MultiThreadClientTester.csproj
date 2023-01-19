@@ -59,9 +59,6 @@
     <None Include="Connected Services\ServiceThrottlingProxyReference\TestService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceThrottlingProxyReference\TestService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

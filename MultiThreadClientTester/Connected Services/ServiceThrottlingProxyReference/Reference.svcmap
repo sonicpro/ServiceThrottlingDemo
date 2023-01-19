@@ -23,7 +23,6 @@
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="TestService.xsd" MetadataType="Schema" ID="ab4bd605-2b12-4349-998f-f57c3a3fa410" SourceId="1" SourceUrl="http://localhost:52681/TestService.svc?xsd=xsd0" />
-    <MetadataFile FileName="TestService1.xsd" MetadataType="Schema" ID="6128dcec-bbb2-44a7-9806-04a27231fb79" SourceId="1" SourceUrl="http://localhost:52681/TestService.svc?xsd=xsd1" />
     <MetadataFile FileName="TestService.wsdl" MetadataType="Wsdl" ID="f4bd1946-65ba-499a-acdd-ec28249a47fb" SourceId="1" SourceUrl="http://localhost:52681/TestService.svc?wsdl" />
     <MetadataFile FileName="TestService.disco" MetadataType="Disco" ID="cf4f0146-68cd-4f23-8a6a-b0a28a71aceb" SourceId="1" SourceUrl="http://localhost:52681/TestService.svc?disco" />
   </Metadata>

@@ -16,10 +16,10 @@ namespace MultiThreadClientTester.ServiceThrottlingProxyReference {
     public interface ITestService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITestService/TestMethod", ReplyAction="http://tempuri.org/ITestService/TestMethodResponse")]
-        int TestMethod();
+        void TestMethod();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITestService/TestMethod", ReplyAction="http://tempuri.org/ITestService/TestMethodResponse")]
-        System.Threading.Tasks.Task<int> TestMethodAsync();
+        System.Threading.Tasks.Task TestMethodAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,11 +49,11 @@ namespace MultiThreadClientTester.ServiceThrottlingProxyReference {
                 base(binding, remoteAddress) {
         }
         
-        public int TestMethod() {
-            return base.Channel.TestMethod();
+        public void TestMethod() {
+            base.Channel.TestMethod();
         }
         
-        public System.Threading.Tasks.Task<int> TestMethodAsync() {
+        public System.Threading.Tasks.Task TestMethodAsync() {
             return base.Channel.TestMethodAsync();
         }
     }
