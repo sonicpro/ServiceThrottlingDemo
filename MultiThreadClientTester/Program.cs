@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.Concurrent;
 using System.Linq;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using MultiThreadClientTester.ServiceThrottlingProxyReference;
 
@@ -19,7 +19,8 @@ namespace MultiThreadClientTester
         // Holds Proxy to Service
         private static TestServiceClient proxy = null;
         // Holds List of Total Thread Times
-        private static List<int> threadTimes = new List<int>();
+        private static ConcurrentBag<int> threadTimes = new ConcurrentBag<int>();
+        private static int taskCounter;
         // Number of Threads for Testing
         private static int numThreads = 10;
         private static bool IsComplete = false;
@@ -83,14 +84,15 @@ namespace MultiThreadClientTester
 
             DateTime end = DateTime.Now;
 
+            var tasksCompleted = Interlocked.Increment(ref taskCounter);
             // Add this to the thread time list
             // So that statistics can be run later
             threadTimes.Add((int)end.Subtract(start).TotalMilliseconds);
 
-            Console.WriteLine($"{threadTimes?.Count} / {numThreads} threads are complete...");
+            Console.WriteLine($"{tasksCompleted} / {numThreads} threads are complete...");
 
             //  Check to see if the threads are done
-            if (threadTimes?.Count == numThreads)
+            if (tasksCompleted == numThreads)
             {
                 IsComplete = true;
             }
